@@ -1,0 +1,3 @@
+[submodule "MG2D-Engine"]
+	path = MG2D-Engine
+	url = git@github.com:CasperHuikeshoven/MG2D-Engine.git
