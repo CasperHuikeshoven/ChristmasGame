@@ -7,6 +7,7 @@ namespace GameMain
     public class ChristmasGame : ExtendedGame
     {
         public const string Key_StartState = "startState";
+        public const string Key_NetworkingState = "networkState";
 
         [STAThread]
         static void Main()
@@ -18,7 +19,8 @@ namespace GameMain
         public ChristmasGame()
         {
             GameStateManager.AddGameState(new StartState(GameStateManager), Key_StartState);
-            GameStateManager.SwitchState(Key_StartState);
+            GameStateManager.AddGameState(new NetworkingState(GameStateManager), Key_NetworkingState);
+            GameStateManager.SwitchState(Key_NetworkingState);
         }
 
         protected override void Initialize()
